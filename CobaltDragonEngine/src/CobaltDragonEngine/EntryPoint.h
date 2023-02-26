@@ -2,11 +2,9 @@
 
 #include "CobaltDragonEngine/Application.h"
 
-extern CDE::Application* CreateApplication();
-
 int main(int argc, char** argv)
 {
-	CDE::Application* app = CreateApplication();
+	CDE::Application* app = CDE::CreateApplication();
 	app->Run();
 	delete app;
 }

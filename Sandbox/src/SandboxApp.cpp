@@ -3,19 +3,12 @@
 class SandboxApp : public CDE::Application
 {
 public:
-	SandboxApp()
-	{
-		CDE_TRACE("Trace");
-		CDE_INFO("Info");
-		CDE_WARN("Warn");
-		CDE_ERROR("Error");
-		CDE_CRITICAL("Critical");
-	}
+	SandboxApp() {}
 
 	virtual ~SandboxApp() {}
 };
 
-CDE::Application* CreateApplication()
+CDE::Application* CDE::CreateApplication()
 {
 	return new SandboxApp;
 }

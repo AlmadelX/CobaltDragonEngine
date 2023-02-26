@@ -135,6 +135,7 @@
   <ItemGroup>
     <ClInclude Include="src\CobaltDragonEngine.h" />
     <ClInclude Include="src\CobaltDragonEngine\Application.h" />
+    <ClInclude Include="src\CobaltDragonEngine\Core.h" />
     <ClInclude Include="src\CobaltDragonEngine\EntryPoint.h" />
     <ClInclude Include="src\CobaltDragonEngine\Log.h" />
     <ClInclude Include="src\cdepch.h" />

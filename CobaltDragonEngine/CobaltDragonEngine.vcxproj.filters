@@ -17,6 +17,7 @@
       <Filter>CobaltDragonEngine</Filter>
     </ClInclude>
     <ClInclude Include="src\cdepch.h" />
+    <ClInclude Include="src\CobaltDragonEngine\Core.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\CobaltDragonEngine\Application.cpp">

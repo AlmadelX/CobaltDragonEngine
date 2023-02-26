@@ -16,4 +16,5 @@
 #include <utility>
 #include <vector>
 
+#include "CobaltDragonEngine/Core.h"
 #include "CobaltDragonEngine/Log.h"
