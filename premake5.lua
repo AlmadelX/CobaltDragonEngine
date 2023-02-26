@@ -32,6 +32,8 @@ project "CobaltDragonEngine"
     location "%{prj.name}"
     files { "%{prj.name}/src/**.cpp", "%{prj.name}/src/**.h" }
     includedirs "%{prj.name}/src"
+    pchheader "cdepch.h"
+    pchsource "%{prj.name}/src/cdepch.cpp"
     staticruntime "On"
     targetdir("bin/" .. outputdir)
     objdir("bin-int/" .. outputdir)
