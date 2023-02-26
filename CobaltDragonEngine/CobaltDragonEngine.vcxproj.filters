@@ -6,13 +6,25 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\cdepch.h" />
     <ClInclude Include="src\CobaltDragonEngine.h" />
-    <ClInclude Include="src\CobaltDragonEngine\EntryPoint.h" />
-    <ClInclude Include="src\CobaltDragonEngine\Application.h" />
+    <ClInclude Include="src\CobaltDragonEngine\Application.h">
+      <Filter>CobaltDragonEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CobaltDragonEngine\EntryPoint.h">
+      <Filter>CobaltDragonEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CobaltDragonEngine\Log.h">
+      <Filter>CobaltDragonEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cdepch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\CobaltDragonEngine\Application.cpp">
+      <Filter>CobaltDragonEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CobaltDragonEngine\Log.cpp">
+      <Filter>CobaltDragonEngine</Filter>
+    </ClCompile>
     <ClCompile Include="src\cdepch.cpp" />
-    <ClCompile Include="src\CobaltDragonEngine\Application.cpp" />
   </ItemGroup>
 </Project>

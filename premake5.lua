@@ -1,4 +1,5 @@
 local outputdir = "%{cfg.buildcfg}-%{cfg.platform}/%{prj.name}"
+local libs = { ["spdlog"] = "CobaltDragonEngine/vendor/spdlog/include" }
 
 workspace "CobaltDragonEngine"
     configurations { "Debug", "Release", "Dist" }
@@ -31,7 +32,7 @@ project "CobaltDragonEngine"
     cppdialect "C++17"
     location "%{prj.name}"
     files { "%{prj.name}/src/**.cpp", "%{prj.name}/src/**.h" }
-    includedirs "%{prj.name}/src"
+    includedirs { "%{prj.name}/src", libs["spdlog"] }
     pchheader "cdepch.h"
     pchsource "%{prj.name}/src/cdepch.cpp"
     staticruntime "On"
@@ -44,7 +45,7 @@ project "Sandbox"
     cppdialect "C++17"
     location "%{prj.name}"
     files { "%{prj.name}/src/**.cpp", "%{prj.name}/src/**.h" }
-    includedirs { "%{prj.name}/src", "CobaltDragonEngine/src" }
+    includedirs { "%{prj.name}/src", "CobaltDragonEngine/src", libs["spdlog"] }
     links "CobaltDragonEngine"
     staticruntime "On"
     targetdir("bin/" .. outputdir)

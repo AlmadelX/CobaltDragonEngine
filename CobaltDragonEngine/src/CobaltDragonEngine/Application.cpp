@@ -5,17 +5,24 @@ namespace CDE {
 
 	Application::Application()
 	{
-		std::cout << "Application created!" << std::endl;
+		Log::Init();
+		CDE_CORE_INFO("Application created!");
 	}
 
 	Application::~Application()
 	{
-		std::cout << "Application destroyed!" << std::endl;
+		CDE_CORE_INFO("Application destroyed!");
 	}
 
 	void Application::Run()
 	{
-		std::cout << "Running application!" << std::endl;
+		CDE_CORE_INFO("Running application!");
+
+		CDE_CORE_TRACE("Trace");
+		CDE_CORE_INFO("Info");
+		CDE_CORE_WARN("Warn");
+		CDE_CORE_ERROR("Error");
+		CDE_CORE_CRITICAL("Critical");
 	}
 
 }

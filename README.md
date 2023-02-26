@@ -6,3 +6,4 @@ My game engine, which I use to learn game engine development.
 * Premake
 * PCH
 * Entry point
+* Logging

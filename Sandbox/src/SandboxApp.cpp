@@ -1,19 +1,18 @@
 #include "CobaltDragonEngine.h"
 
-#include <iostream>
-
 class SandboxApp : public CDE::Application
 {
 public:
 	SandboxApp()
 	{
-		std::cout << "SandboxApp created!" << std::endl;
+		CDE_TRACE("Trace");
+		CDE_INFO("Info");
+		CDE_WARN("Warn");
+		CDE_ERROR("Error");
+		CDE_CRITICAL("Critical");
 	}
 
-	virtual ~SandboxApp()
-	{
-		std::cout << "SandboxApp deleted!" << std::endl;
-	}
+	virtual ~SandboxApp() {}
 };
 
 CDE::Application* CreateApplication()
