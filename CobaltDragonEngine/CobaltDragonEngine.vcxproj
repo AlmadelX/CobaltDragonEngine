@@ -133,14 +133,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="src\CobaltDragonEngine\Test.h" />
+    <ClInclude Include="src\CobaltDragonEngine.h" />
+    <ClInclude Include="src\CobaltDragonEngine\Application.h" />
+    <ClInclude Include="src\CobaltDragonEngine\EntryPoint.h" />
     <ClInclude Include="src\cdepch.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\CobaltDragonEngine\Test.cpp" />
     <ClCompile Include="src\cdepch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="src\CobaltDragonEngine\Application.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -5,3 +5,4 @@ My game engine, which I use to learn game engine development.
 * Visual Studio solution
 * Premake
 * PCH
+* Entry point
