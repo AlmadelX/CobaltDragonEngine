@@ -7,3 +7,4 @@ My game engine, which I use to learn game engine development.
 * PCH
 * Entry point
 * Logging
+* Event system

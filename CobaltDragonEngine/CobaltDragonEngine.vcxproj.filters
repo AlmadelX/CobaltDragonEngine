@@ -18,6 +18,12 @@
     </ClInclude>
     <ClInclude Include="src\cdepch.h" />
     <ClInclude Include="src\CobaltDragonEngine\Core.h" />
+    <ClInclude Include="src\CobaltDragonEngine\events\Event.h" />
+    <ClInclude Include="src\CobaltDragonEngine\events\ApplicationEvent.h" />
+    <ClInclude Include="src\CobaltDragonEngine\events\WindowEvent.h" />
+    <ClInclude Include="src\CobaltDragonEngine\events\KeyEvent.h" />
+    <ClInclude Include="src\CobaltDragonEngine\events\MouseEvent.h" />
+    <ClInclude Include="src\CobaltDragonEngine\events\EventDispatcher.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\CobaltDragonEngine\Application.cpp">
@@ -27,5 +33,9 @@
       <Filter>CobaltDragonEngine</Filter>
     </ClCompile>
     <ClCompile Include="src\cdepch.cpp" />
+    <ClCompile Include="src\CobaltDragonEngine\events\ApplicationEvent.cpp" />
+    <ClCompile Include="src\CobaltDragonEngine\events\WindowEvent.cpp" />
+    <ClCompile Include="src\CobaltDragonEngine\events\KeyEvent.cpp" />
+    <ClCompile Include="src\CobaltDragonEngine\events\MouseEvent.cpp" />
   </ItemGroup>
 </Project>

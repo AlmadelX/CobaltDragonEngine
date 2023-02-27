@@ -6,6 +6,7 @@
 #include <cmath>
 #include <exception>
 #include <functional>
+#include <iomanip>
 #include <iostream>
 #include <memory>
 #include <random>

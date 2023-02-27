@@ -1,10 +1,14 @@
 #include "cdepch.h"
 #include "Application.h"
 
+#include "events/ApplicationEvent.h"
+#include "events/EventDispatcher.h"
+
 namespace CDE {
 
 	Application::Application()
 	{
+		s_Instance = this;
 		Log::Init();
 		CDE_CORE_INFO("Application created!");
 	}
@@ -18,5 +22,7 @@ namespace CDE {
 	{
 		CDE_CORE_INFO("Running application!");
 	}
+
+	Application* Application::s_Instance;
 
 }
