@@ -12,7 +12,7 @@
 #define EVENT_CATEGORIES(categories) inline static constexpr int Categories()	   { return (categories); }\
 								 inline virtual int GetCategories() const override { return Categories(); }
 
-#define EVENT_HANDLER(handler) std::bind(&handler, this, std::placeholders::_1)
+#define BIND_FN(fn) std::bind(&fn, this, std::placeholders::_1)
 
 namespace CDE {
 

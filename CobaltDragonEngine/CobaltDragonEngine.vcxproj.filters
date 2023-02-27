@@ -4,10 +4,19 @@
     <Filter Include="CobaltDragonEngine">
       <UniqueIdentifier>{2B1B83D2-17FF-4328-805F-3E7B6C622EAA}</UniqueIdentifier>
     </Filter>
+    <Filter Include="CobaltDragonEngine\events">
+      <UniqueIdentifier>{CF3CC037-3BFF-F3C1-84AF-824EF0B0CC9F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\CobaltDragonEngine.h" />
     <ClInclude Include="src\CobaltDragonEngine\Application.h">
+      <Filter>CobaltDragonEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CobaltDragonEngine\Core.h">
       <Filter>CobaltDragonEngine</Filter>
     </ClInclude>
     <ClInclude Include="src\CobaltDragonEngine\EntryPoint.h">
@@ -16,14 +25,31 @@
     <ClInclude Include="src\CobaltDragonEngine\Log.h">
       <Filter>CobaltDragonEngine</Filter>
     </ClInclude>
+    <ClInclude Include="src\CobaltDragonEngine\Window.h">
+      <Filter>CobaltDragonEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CobaltDragonEngine\events\ApplicationEvent.h">
+      <Filter>CobaltDragonEngine\events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CobaltDragonEngine\events\Event.h">
+      <Filter>CobaltDragonEngine\events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CobaltDragonEngine\events\EventDispatcher.h">
+      <Filter>CobaltDragonEngine\events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CobaltDragonEngine\events\KeyEvent.h">
+      <Filter>CobaltDragonEngine\events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CobaltDragonEngine\events\MouseEvent.h">
+      <Filter>CobaltDragonEngine\events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CobaltDragonEngine\events\WindowEvent.h">
+      <Filter>CobaltDragonEngine\events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\WindowsWindow.h">
+      <Filter>Platform</Filter>
+    </ClInclude>
     <ClInclude Include="src\cdepch.h" />
-    <ClInclude Include="src\CobaltDragonEngine\Core.h" />
-    <ClInclude Include="src\CobaltDragonEngine\events\Event.h" />
-    <ClInclude Include="src\CobaltDragonEngine\events\ApplicationEvent.h" />
-    <ClInclude Include="src\CobaltDragonEngine\events\WindowEvent.h" />
-    <ClInclude Include="src\CobaltDragonEngine\events\KeyEvent.h" />
-    <ClInclude Include="src\CobaltDragonEngine\events\MouseEvent.h" />
-    <ClInclude Include="src\CobaltDragonEngine\events\EventDispatcher.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\CobaltDragonEngine\Application.cpp">
@@ -32,10 +58,21 @@
     <ClCompile Include="src\CobaltDragonEngine\Log.cpp">
       <Filter>CobaltDragonEngine</Filter>
     </ClCompile>
+    <ClCompile Include="src\CobaltDragonEngine\events\ApplicationEvent.cpp">
+      <Filter>CobaltDragonEngine\events</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CobaltDragonEngine\events\KeyEvent.cpp">
+      <Filter>CobaltDragonEngine\events</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CobaltDragonEngine\events\MouseEvent.cpp">
+      <Filter>CobaltDragonEngine\events</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CobaltDragonEngine\events\WindowEvent.cpp">
+      <Filter>CobaltDragonEngine\events</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\WindowsWindow.cpp">
+      <Filter>Platform</Filter>
+    </ClCompile>
     <ClCompile Include="src\cdepch.cpp" />
-    <ClCompile Include="src\CobaltDragonEngine\events\ApplicationEvent.cpp" />
-    <ClCompile Include="src\CobaltDragonEngine\events\WindowEvent.cpp" />
-    <ClCompile Include="src\CobaltDragonEngine\events\KeyEvent.cpp" />
-    <ClCompile Include="src\CobaltDragonEngine\events\MouseEvent.cpp" />
   </ItemGroup>
 </Project>

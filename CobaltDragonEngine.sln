@@ -5,6 +5,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Sandbox", "Sandbox\Sandbox.
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CobaltDragonEngine", "CobaltDragonEngine\CobaltDragonEngine.vcxproj", "{2B1B83D2-17FF-4328-805F-3E7B6C622EAA}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dependencies", "Dependencies", "{53E47842-3FC8-3998-A828-34EB942B241A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GLFW", "CobaltDragonEngine\vendor\GLFW\GLFW.vcxproj", "{154B857C-0182-860D-AA6E-6C109684020F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Windows = Debug|Windows
@@ -24,8 +28,17 @@ Global
 		{2B1B83D2-17FF-4328-805F-3E7B6C622EAA}.Dist|Windows.Build.0 = Dist Windows|x64
 		{2B1B83D2-17FF-4328-805F-3E7B6C622EAA}.Release|Windows.ActiveCfg = Release Windows|x64
 		{2B1B83D2-17FF-4328-805F-3E7B6C622EAA}.Release|Windows.Build.0 = Release Windows|x64
+		{154B857C-0182-860D-AA6E-6C109684020F}.Debug|Windows.ActiveCfg = Debug Windows|x64
+		{154B857C-0182-860D-AA6E-6C109684020F}.Debug|Windows.Build.0 = Debug Windows|x64
+		{154B857C-0182-860D-AA6E-6C109684020F}.Dist|Windows.ActiveCfg = Dist Windows|x64
+		{154B857C-0182-860D-AA6E-6C109684020F}.Dist|Windows.Build.0 = Dist Windows|x64
+		{154B857C-0182-860D-AA6E-6C109684020F}.Release|Windows.ActiveCfg = Release Windows|x64
+		{154B857C-0182-860D-AA6E-6C109684020F}.Release|Windows.Build.0 = Release Windows|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{154B857C-0182-860D-AA6E-6C109684020F} = {53E47842-3FC8-3998-A828-34EB942B241A}
 	EndGlobalSection
 EndGlobal

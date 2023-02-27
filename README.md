@@ -8,3 +8,4 @@ My game engine, which I use to learn game engine development.
 * Entry point
 * Logging
 * Event system
+* Window
