@@ -3,10 +3,7 @@
 class SandboxApp : public CDE::Application
 {
 public:
-	SandboxApp()
-	{
-		
-	}
+	SandboxApp() {}
 
 	virtual ~SandboxApp() {}
 };

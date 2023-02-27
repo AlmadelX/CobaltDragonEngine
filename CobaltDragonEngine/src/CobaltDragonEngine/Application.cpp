@@ -32,6 +32,7 @@ namespace CDE {
 
 	void Application::OnEvent(Event& e)
 	{
+		CDE_CORE_TRACE("{}", e);
 		EventDispatcher dispatcher(e);
 		dispatcher.Dispatch<WindowCloseEvent>(BIND_FN(Application::OnWindowClose));
 	}
