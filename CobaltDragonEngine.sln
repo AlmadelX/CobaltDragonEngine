@@ -9,6 +9,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dependencies", "Dependencie
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GLFW", "CobaltDragonEngine\vendor\GLFW\GLFW.vcxproj", "{154B857C-0182-860D-AA6E-6C109684020F}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ImGui", "CobaltDragonEngine\vendor\ImGui\ImGui.vcxproj", "{C0FF640D-2C14-8DBE-F595-301E616989EF}"
+EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "glad", "CobaltDragonEngine\vendor\glad\glad.vcxproj", "{DD62977C-C999-980D-7286-7E105E9C140F}"
 EndProject
 Global
@@ -36,6 +38,12 @@ Global
 		{154B857C-0182-860D-AA6E-6C109684020F}.Dist|Windows.Build.0 = Dist Windows|x64
 		{154B857C-0182-860D-AA6E-6C109684020F}.Release|Windows.ActiveCfg = Release Windows|x64
 		{154B857C-0182-860D-AA6E-6C109684020F}.Release|Windows.Build.0 = Release Windows|x64
+		{C0FF640D-2C14-8DBE-F595-301E616989EF}.Debug|Windows.ActiveCfg = Debug Windows|x64
+		{C0FF640D-2C14-8DBE-F595-301E616989EF}.Debug|Windows.Build.0 = Debug Windows|x64
+		{C0FF640D-2C14-8DBE-F595-301E616989EF}.Dist|Windows.ActiveCfg = Dist Windows|x64
+		{C0FF640D-2C14-8DBE-F595-301E616989EF}.Dist|Windows.Build.0 = Dist Windows|x64
+		{C0FF640D-2C14-8DBE-F595-301E616989EF}.Release|Windows.ActiveCfg = Release Windows|x64
+		{C0FF640D-2C14-8DBE-F595-301E616989EF}.Release|Windows.Build.0 = Release Windows|x64
 		{DD62977C-C999-980D-7286-7E105E9C140F}.Debug|Windows.ActiveCfg = Debug Windows|x64
 		{DD62977C-C999-980D-7286-7E105E9C140F}.Debug|Windows.Build.0 = Debug Windows|x64
 		{DD62977C-C999-980D-7286-7E105E9C140F}.Dist|Windows.ActiveCfg = Dist Windows|x64
@@ -48,6 +56,7 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{154B857C-0182-860D-AA6E-6C109684020F} = {53E47842-3FC8-3998-A828-34EB942B241A}
+		{C0FF640D-2C14-8DBE-F595-301E616989EF} = {53E47842-3FC8-3998-A828-34EB942B241A}
 		{DD62977C-C999-980D-7286-7E105E9C140F} = {53E47842-3FC8-3998-A828-34EB942B241A}
 	EndGlobalSection
 EndGlobal

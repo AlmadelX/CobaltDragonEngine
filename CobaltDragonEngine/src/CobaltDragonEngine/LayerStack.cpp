@@ -20,7 +20,7 @@ namespace CDE {
 		layer->OnAttach();
 	}
 
-	void LayerStack::PushOverlayer(Layer* overlay)
+	void LayerStack::PushOverlay(Layer* overlay)
 	{
 		m_Layers.emplace_back(overlay);
 		overlay->OnAttach();

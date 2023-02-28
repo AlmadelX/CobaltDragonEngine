@@ -1,13 +1,16 @@
 #include "CobaltDragonEngine.h"
 
-#include <glm/vec3.hpp>
+#include <imgui.h>
 
 class GameLayer : public CDE::Layer
 {
 public:
-	GameLayer() : Layer("Game")
+	GameLayer() : Layer("Game") {}
+
+	virtual void OnImGuiRender() override
 	{
-		glm::vec3 v(1.0f, 2.0f, 3.0f);
+		bool show;
+		ImGui::ShowDemoWindow(&show);
 	}
 };
 
