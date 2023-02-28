@@ -45,6 +45,8 @@ namespace CDE {
 		inline static Logger& GetCoreLogger() { return s_CoreLogger; }
 		inline static Logger& GetClientLogger() { return s_ClientLogger; }
 
+		Log() = delete;
+
 	private:
 		static Logger s_CoreLogger;
 		static Logger s_ClientLogger;

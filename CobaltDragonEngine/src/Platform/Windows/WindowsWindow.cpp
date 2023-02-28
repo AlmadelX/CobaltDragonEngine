@@ -15,14 +15,18 @@ namespace CDE {
 	WindowsWindow::WindowsWindow(const WindowProps& props)
 		: m_Data{ props.Title, props.Width, props.Height }
 	{
+		CDE_ASSERT(!s_Instance, "Only one window is supported");
+		s_Instance = this;
+
 		InitGLFW();
 
 		m_Window = glfwCreateWindow(m_Data.Width, m_Data.Height, m_Data.Title.c_str(), nullptr, nullptr);
+
 		glfwSetWindowUserPointer(m_Window, &m_Data);
+		SetupGLFWCallbacks();
+
 		glfwMakeContextCurrent(m_Window);
 		SetVSync(true);
-
-		SetupGLFWCallbacks();
 	}
 
 	WindowsWindow::~WindowsWindow()
@@ -56,14 +60,14 @@ namespace CDE {
 		glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 6);
 	}
 
-	void WindowsWindow::OnGLFWError(int error, const char* description)
-	{
-		CDE_CORE_ERROR("GLFW Error {}: {}", error, description);
-	}
-
 	void WindowsWindow::ShutdownGLFW()
 	{
 		glfwTerminate();
+	}
+
+	void WindowsWindow::OnGLFWError(int error, const char* description)
+	{
+		CDE_CORE_ERROR("GLFW Error {}: {}", error, description);
 	}
 
 	void WindowsWindow::SetupGLFWCallbacks()
@@ -188,5 +192,7 @@ namespace CDE {
 			}
 		});
 	}
+
+	WindowsWindow* WindowsWindow::s_Instance;
 
 }

@@ -36,10 +36,12 @@ namespace CDE {
 		};
 
 		static void InitGLFW();
-		static void OnGLFWError(int error, const char* description);
 		static void ShutdownGLFW();
+		static void OnGLFWError(int error, const char* description);
 
 		void SetupGLFWCallbacks();
+
+		static WindowsWindow* s_Instance;
 
 		Data m_Data;
 		GLFWwindow* m_Window;

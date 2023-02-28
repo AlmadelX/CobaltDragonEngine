@@ -6,23 +6,20 @@
 
 namespace CDE {
 
-	Application::Application()
-		: m_Window(Window::Create())
+	Application& Application::Get()
 	{
-		s_Instance = this;
-		Log::Init();
-		m_Window->SetEventCallback(BIND_FN(Application::OnEvent));
-		CDE_CORE_INFO("Application created!");
+		CDE_ASSERT(s_Instance, "Application is not created yet");
+		return *s_Instance;
 	}
 
 	Application::~Application()
 	{
-		CDE_CORE_INFO("Application destroyed!");
+		CDE_CORE_INFO("Application destroyed");
 	}
 
 	void Application::Run()
 	{
-		CDE_CORE_INFO("Running application!");
+		CDE_CORE_INFO("Running application");
 
 		while (m_Running)
 		{
@@ -32,9 +29,19 @@ namespace CDE {
 
 	void Application::OnEvent(Event& e)
 	{
-		CDE_CORE_TRACE("{}", e);
 		EventDispatcher dispatcher(e);
 		dispatcher.Dispatch<WindowCloseEvent>(BIND_FN(Application::OnWindowClose));
+	}
+
+	Application::Application()
+		: m_Window(Window::Create())
+	{
+		CDE_ASSERT(!s_Instance, "Application is already created");
+		s_Instance = this;
+
+		Log::Init();
+		m_Window->SetEventCallback(BIND_FN(Application::OnEvent));
+		CDE_CORE_INFO("Application created");
 	}
 
 	bool Application::OnWindowClose(const WindowCloseEvent& event)

@@ -3,12 +3,18 @@
 class SandboxApp : public CDE::Application
 {
 public:
-	SandboxApp() {}
+	SandboxApp()
+	{
+		
+	}
 
-	virtual ~SandboxApp() {}
+	virtual ~SandboxApp()
+	{
+
+	}
 };
 
-CDE::Application* CDE::CreateApplication()
+CDE::Application* CDE::Application::Create()
 {
 	return new SandboxApp;
 }

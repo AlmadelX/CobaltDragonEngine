@@ -10,15 +10,20 @@ namespace CDE {
 	class Application
 	{
 	public:
-		inline static Application& Get() { return *s_Instance; }
+		// To be defined by client
+		static Application* Create();
 
-		Application();
+		static Application& Get();
+
 		virtual ~Application();
 
 		void Run();
 		void OnEvent(Event& e);
 
 		const Window& GetWindow() const { return *m_Window; }
+
+	protected:
+		Application();
 
 	private:
 		bool OnWindowClose(const WindowCloseEvent& event);
@@ -28,8 +33,5 @@ namespace CDE {
 		bool m_Running = true;
 		std::unique_ptr<Window> m_Window;
 	};
-
-	// To be defined by client
-	Application* CreateApplication();
 
 }

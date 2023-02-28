@@ -46,7 +46,7 @@
     <ClInclude Include="src\CobaltDragonEngine\events\WindowEvent.h">
       <Filter>CobaltDragonEngine\events</Filter>
     </ClInclude>
-    <ClInclude Include="src\Platform\WindowsWindow.h">
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
       <Filter>Platform</Filter>
     </ClInclude>
     <ClInclude Include="src\cdepch.h" />
@@ -70,7 +70,7 @@
     <ClCompile Include="src\CobaltDragonEngine\events\WindowEvent.cpp">
       <Filter>CobaltDragonEngine\events</Filter>
     </ClCompile>
-    <ClCompile Include="src\Platform\WindowsWindow.cpp">
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
       <Filter>Platform</Filter>
     </ClCompile>
     <ClCompile Include="src\cdepch.cpp" />

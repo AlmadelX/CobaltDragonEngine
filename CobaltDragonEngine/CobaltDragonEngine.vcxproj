@@ -154,7 +154,7 @@
     <ClInclude Include="src\CobaltDragonEngine\events\KeyEvent.h" />
     <ClInclude Include="src\CobaltDragonEngine\events\MouseEvent.h" />
     <ClInclude Include="src\CobaltDragonEngine\events\WindowEvent.h" />
-    <ClInclude Include="src\Platform\WindowsWindow.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\cdepch.h" />
   </ItemGroup>
   <ItemGroup>
@@ -164,7 +164,7 @@
     <ClCompile Include="src\CobaltDragonEngine\events\KeyEvent.cpp" />
     <ClCompile Include="src\CobaltDragonEngine\events\MouseEvent.cpp" />
     <ClCompile Include="src\CobaltDragonEngine\events\WindowEvent.cpp" />
-    <ClCompile Include="src\Platform\WindowsWindow.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\cdepch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
