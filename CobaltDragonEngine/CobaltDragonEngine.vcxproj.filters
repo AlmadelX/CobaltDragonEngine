@@ -59,8 +59,10 @@
       <Filter>Platform\Windows</Filter>
     </ClInclude>
     <ClInclude Include="src\cdepch.h" />
-    <ClInclude Include="src\CobaltDragonEngine\Input.h" />
+    <ClInclude Include="src\CobaltDragonEngine\input\Input.h" />
     <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
+    <ClInclude Include="src\CobaltDragonEngine\input\KeyCodes.h" />
+    <ClInclude Include="src\CobaltDragonEngine\input\MouseCodes.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\CobaltDragonEngine\Application.cpp">

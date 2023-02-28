@@ -4,7 +4,6 @@
 #include "CobaltDragonEngine/Core.h"
 
 #include "CobaltDragonEngine/Application.h"
-#include "CobaltDragonEngine/Input.h"
 #include "CobaltDragonEngine/Layer.h"
 #include "CobaltDragonEngine/Log.h"
 
@@ -14,6 +13,11 @@
 #include "CobaltDragonEngine/events/KeyEvent.h"
 #include "CobaltDragonEngine/events/MouseEvent.h"
 #include "CobaltDragonEngine/events/WindowEvent.h"
+
+// Input
+#include "CobaltDragonEngine/input/Input.h"
+#include "CobaltDragonEngine/input/KeyCodes.h"
+#include "CobaltDragonEngine/input/MouseCodes.h"
 
 // Entry point is here
 #include "CobaltDragonEngine/EntryPoint.h"

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "CobaltDragonEngine/Input.h"
+#include "CobaltDragonEngine/input/Input.h"
 
 namespace CDE {
 

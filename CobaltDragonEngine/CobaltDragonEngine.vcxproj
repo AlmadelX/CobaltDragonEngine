@@ -146,7 +146,9 @@
     <ClInclude Include="src\CobaltDragonEngine\Application.h" />
     <ClInclude Include="src\CobaltDragonEngine\Core.h" />
     <ClInclude Include="src\CobaltDragonEngine\EntryPoint.h" />
-    <ClInclude Include="src\CobaltDragonEngine\Input.h" />
+    <ClInclude Include="src\CobaltDragonEngine\input\Input.h" />
+    <ClInclude Include="src\CobaltDragonEngine\input\KeyCodes.h" />
+    <ClInclude Include="src\CobaltDragonEngine\input\MouseCodes.h" />
     <ClInclude Include="src\CobaltDragonEngine\Layer.h" />
     <ClInclude Include="src\CobaltDragonEngine\LayerStack.h" />
     <ClInclude Include="src\CobaltDragonEngine\Log.h" />

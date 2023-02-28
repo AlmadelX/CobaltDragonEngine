@@ -7,7 +7,7 @@ public:
 
 	virtual void OnUpdate() override
 	{
-		CDE_TRACE("Mouse position polling: ({}, {})", CDE::Input::GetMouseX(), CDE::Input::GetMouseY());
+		CDE_TRACE("Space key polling: {}", CDE::Input::IsKeyPressed(CDE_KEY_SPACE) ? "Pressed" : "Released");
 	}
 };
 
