@@ -50,6 +50,8 @@
       <Filter>Platform</Filter>
     </ClInclude>
     <ClInclude Include="src\cdepch.h" />
+    <ClInclude Include="src\CobaltDragonEngine\Layer.h" />
+    <ClInclude Include="src\CobaltDragonEngine\LayerStack.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\CobaltDragonEngine\Application.cpp">
@@ -74,5 +76,6 @@
       <Filter>Platform</Filter>
     </ClCompile>
     <ClCompile Include="src\cdepch.cpp" />
+    <ClCompile Include="src\CobaltDragonEngine\LayerStack.cpp" />
   </ItemGroup>
 </Project>

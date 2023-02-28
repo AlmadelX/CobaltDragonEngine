@@ -4,6 +4,7 @@
 
 #include "Window.h"
 #include "events/WindowEvent.h"
+#include "LayerStack.h"
 
 namespace CDE {
 
@@ -18,7 +19,15 @@ namespace CDE {
 		virtual ~Application();
 
 		void Run();
-		void OnEvent(Event& e);
+		void OnEvent(Event& event);
+
+		// Takes ownership
+		void PushLayer(Layer* layer);
+		void PushOverlay(Layer* overlay);
+
+		// Returns ownership
+		void PopLayer(Layer* layer);
+		void PopOverlay(Layer* overlay);
 
 		const Window& GetWindow() const { return *m_Window; }
 
@@ -32,6 +41,7 @@ namespace CDE {
 
 		bool m_Running = true;
 		std::unique_ptr<Window> m_Window;
+		LayerStack m_LayerStack;
 	};
 
 }

@@ -4,6 +4,7 @@
 #include "CobaltDragonEngine/Core.h"
 
 #include "CobaltDragonEngine/Application.h"
+#include "CobaltDragonEngine/Layer.h"
 #include "CobaltDragonEngine/Log.h"
 
 // Events

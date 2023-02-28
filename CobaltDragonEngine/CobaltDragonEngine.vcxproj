@@ -146,6 +146,8 @@
     <ClInclude Include="src\CobaltDragonEngine\Application.h" />
     <ClInclude Include="src\CobaltDragonEngine\Core.h" />
     <ClInclude Include="src\CobaltDragonEngine\EntryPoint.h" />
+    <ClInclude Include="src\CobaltDragonEngine\Layer.h" />
+    <ClInclude Include="src\CobaltDragonEngine\LayerStack.h" />
     <ClInclude Include="src\CobaltDragonEngine\Log.h" />
     <ClInclude Include="src\CobaltDragonEngine\Window.h" />
     <ClInclude Include="src\CobaltDragonEngine\events\ApplicationEvent.h" />
@@ -159,6 +161,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\CobaltDragonEngine\Application.cpp" />
+    <ClCompile Include="src\CobaltDragonEngine\LayerStack.cpp" />
     <ClCompile Include="src\CobaltDragonEngine\Log.cpp" />
     <ClCompile Include="src\CobaltDragonEngine\events\ApplicationEvent.cpp" />
     <ClCompile Include="src\CobaltDragonEngine\events\KeyEvent.cpp" />
