@@ -27,6 +27,9 @@ namespace CDE {
 
 		glfwMakeContextCurrent(m_Window);
 		SetVSync(true);
+
+		// Temporary
+		CDE_CORE_ASSERT(gladLoadGLLoader(reinterpret_cast<GLADloadproc>(glfwGetProcAddress)), "Failed to initialize glad");
 	}
 
 	WindowsWindow::~WindowsWindow()

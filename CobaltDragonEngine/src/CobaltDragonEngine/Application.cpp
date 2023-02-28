@@ -1,6 +1,9 @@
 #include "cdepch.h"
 #include "Application.h"
 
+// Temporary
+#include <glad/glad.h>
+
 #include "events/ApplicationEvent.h"
 #include "events/EventDispatcher.h"
 
@@ -28,6 +31,10 @@ namespace CDE {
 
 			for (Layer* layer : m_LayerStack)
 				layer->OnRender();
+
+			// Temporary
+			glClearColor(0.1f, 0.8f, 0.7f, 1.0f);
+			glClear(GL_COLOR_BUFFER_BIT);
 
 			m_Window->OnUpdate();
 		}

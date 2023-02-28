@@ -10,6 +10,9 @@
     <Filter Include="Platform">
       <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Platform\Windows">
+      <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\CobaltDragonEngine.h" />
@@ -20,6 +23,12 @@
       <Filter>CobaltDragonEngine</Filter>
     </ClInclude>
     <ClInclude Include="src\CobaltDragonEngine\EntryPoint.h">
+      <Filter>CobaltDragonEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CobaltDragonEngine\Layer.h">
+      <Filter>CobaltDragonEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CobaltDragonEngine\LayerStack.h">
       <Filter>CobaltDragonEngine</Filter>
     </ClInclude>
     <ClInclude Include="src\CobaltDragonEngine\Log.h">
@@ -47,14 +56,15 @@
       <Filter>CobaltDragonEngine\events</Filter>
     </ClInclude>
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
-      <Filter>Platform</Filter>
+      <Filter>Platform\Windows</Filter>
     </ClInclude>
     <ClInclude Include="src\cdepch.h" />
-    <ClInclude Include="src\CobaltDragonEngine\Layer.h" />
-    <ClInclude Include="src\CobaltDragonEngine\LayerStack.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\CobaltDragonEngine\Application.cpp">
+      <Filter>CobaltDragonEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CobaltDragonEngine\LayerStack.cpp">
       <Filter>CobaltDragonEngine</Filter>
     </ClCompile>
     <ClCompile Include="src\CobaltDragonEngine\Log.cpp">
@@ -73,9 +83,8 @@
       <Filter>CobaltDragonEngine\events</Filter>
     </ClCompile>
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
-      <Filter>Platform</Filter>
+      <Filter>Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\cdepch.cpp" />
-    <ClCompile Include="src\CobaltDragonEngine\LayerStack.cpp" />
   </ItemGroup>
 </Project>

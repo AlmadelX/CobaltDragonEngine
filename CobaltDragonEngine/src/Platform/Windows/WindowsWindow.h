@@ -1,5 +1,8 @@
 #pragma once
 
+// Temporary
+#include <glad/glad.h>
+
 #include <GLFW/glfw3.h>
 
 #include "CobaltDragonEngine/Window.h"

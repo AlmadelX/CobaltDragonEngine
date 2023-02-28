@@ -10,3 +10,4 @@ My game engine, which I use to learn game engine development.
 * Event system
 * Window
 * Layers
+* glad
