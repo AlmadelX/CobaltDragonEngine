@@ -4,6 +4,9 @@
     <Filter Include="CobaltDragonEngine">
       <UniqueIdentifier>{2B1B83D2-17FF-4328-805F-3E7B6C622EAA}</UniqueIdentifier>
     </Filter>
+    <Filter Include="CobaltDragonEngine\ImGui">
+      <UniqueIdentifier>{95043C2E-8129-8BAE-AA74-703E96F889CC}</UniqueIdentifier>
+    </Filter>
     <Filter Include="CobaltDragonEngine\events">
       <UniqueIdentifier>{CF3CC037-3BFF-F3C1-84AF-824EF0B0CC9F}</UniqueIdentifier>
     </Filter>
@@ -74,10 +77,14 @@
       <Filter>Platform\Windows</Filter>
     </ClInclude>
     <ClInclude Include="src\cdepch.h" />
+    <ClInclude Include="src\CobaltDragonEngine\ImGui\ImGuiLayer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\CobaltDragonEngine\Application.cpp">
       <Filter>CobaltDragonEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CobaltDragonEngine\ImGui\ImGui.cpp">
+      <Filter>CobaltDragonEngine\ImGui</Filter>
     </ClCompile>
     <ClCompile Include="src\CobaltDragonEngine\LayerStack.cpp">
       <Filter>CobaltDragonEngine</Filter>
@@ -104,5 +111,6 @@
       <Filter>Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\cdepch.cpp" />
+    <ClCompile Include="src\CobaltDragonEngine\ImGui\ImGuiLayer.cpp" />
   </ItemGroup>
 </Project>

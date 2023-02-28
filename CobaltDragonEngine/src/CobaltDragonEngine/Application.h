@@ -5,6 +5,7 @@
 #include "Window.h"
 #include "events/WindowEvent.h"
 #include "LayerStack.h"
+#include "ImGui/ImGuiLayer.h"
 
 namespace CDE {
 
@@ -29,7 +30,7 @@ namespace CDE {
 		void PopLayer(Layer* layer);
 		void PopOverlay(Layer* overlay);
 
-		const Window& GetWindow() const { return *m_Window; }
+		Window& GetWindow() { return *m_Window; }
 
 	protected:
 		Application();
@@ -42,6 +43,7 @@ namespace CDE {
 		bool m_Running = true;
 		std::unique_ptr<Window> m_Window;
 		LayerStack m_LayerStack;
+		ImGuiLayer* m_ImGuiLayer;
 	};
 
 }

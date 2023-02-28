@@ -19,7 +19,7 @@ namespace CDE {
 
 		// Takes ownership
 		void PushLayer(Layer* layer);
-		void PushOverlayer(Layer* overlay);
+		void PushOverlay(Layer* overlay);
 
 		// Returns ownership
 		void PopLayer(Layer* layer);

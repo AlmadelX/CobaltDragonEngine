@@ -3,7 +3,6 @@
 
 // Temporary
 #include <glad/glad.h>
-#include <glm/vec3.hpp>
 
 #include "events/ApplicationEvent.h"
 #include "events/EventDispatcher.h"
@@ -37,7 +36,11 @@ namespace CDE {
 			glClearColor(0.1f, 0.8f, 0.7f, 1.0f);
 			glClear(GL_COLOR_BUFFER_BIT);
 
-			glm::vec3 v(2.0f, 4.0f, 8.0f);
+			//ImGui
+			m_ImGuiLayer->Begin();
+			for (Layer* layer : m_LayerStack)
+				layer->OnImGuiRender();
+			m_ImGuiLayer->End();
 
 			m_Window->OnUpdate();
 		}
@@ -59,7 +62,7 @@ namespace CDE {
 
 	void Application::PushOverlay(Layer* overlay)
 	{
-		m_LayerStack.PushOverlayer(overlay);
+		m_LayerStack.PushOverlay(overlay);
 	}
 
 	void Application::PopLayer(Layer* layer)
@@ -69,7 +72,7 @@ namespace CDE {
 
 	void Application::PopOverlay(Layer* overlay)
 	{
-		m_LayerStack.PushOverlayer(overlay);
+		m_LayerStack.PushOverlay(overlay);
 	}
 
 	Application::Application()
@@ -80,6 +83,9 @@ namespace CDE {
 
 		Log::Init();
 		m_Window->SetEventCallback(BIND_FN(Application::OnEvent));
+		m_ImGuiLayer = new ImGuiLayer;
+		m_LayerStack.PushOverlay(m_ImGuiLayer);
+
 		CDE_CORE_INFO("Application created");
 	}
 
