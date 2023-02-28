@@ -3,6 +3,7 @@
 
 // Temporary
 #include <glad/glad.h>
+#include <glm/vec3.hpp>
 
 #include "events/ApplicationEvent.h"
 #include "events/EventDispatcher.h"
@@ -35,6 +36,8 @@ namespace CDE {
 			// Temporary
 			glClearColor(0.1f, 0.8f, 0.7f, 1.0f);
 			glClear(GL_COLOR_BUFFER_BIT);
+
+			glm::vec3 v(2.0f, 4.0f, 8.0f);
 
 			m_Window->OnUpdate();
 		}

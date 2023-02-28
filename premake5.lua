@@ -3,7 +3,8 @@ outputdir = "%{cfg.buildcfg}-%{cfg.platform}/%{prj.name}"
 local libs = {
     ["spdlog"] = "CobaltDragonEngine/vendor/spdlog/include",
     ["GLFW"]   = "CobaltDragonEngine/vendor/GLFW/include",
-    ["glad"]   = "CobaltDragonEngine/vendor/glad/include"
+    ["glad"]   = "CobaltDragonEngine/vendor/glad/include",
+    ["glm"]    = "CobaltDragonEngine/vendor/glm/include"
 }
 
 workspace "CobaltDragonEngine"
@@ -43,7 +44,7 @@ project "CobaltDragonEngine"
     cppdialect "C++17"
     location "%{prj.name}"
     files { "%{prj.name}/src/**.h", "%{prj.name}/src/**.cpp" }
-    includedirs { "%{prj.name}/src", libs["spdlog"], libs["GLFW"], libs["glad"] }
+    includedirs { "%{prj.name}/src", libs["spdlog"], libs["GLFW"], libs["glad"], libs["glm"] }
     pchheader "cdepch.h"
     pchsource "%{prj.name}/src/cdepch.cpp"
     links { "opengl32.lib", "GLFW", "glad" }
@@ -57,7 +58,7 @@ project "Sandbox"
     cppdialect "C++17"
     location "%{prj.name}"
     files { "%{prj.name}/src/**.h", "%{prj.name}/src/**.cpp" }
-    includedirs { "%{prj.name}/src", "CobaltDragonEngine/src", libs["spdlog"] }
+    includedirs { "%{prj.name}/src", "CobaltDragonEngine/src", libs["spdlog"], libs["glm"] }
     links "CobaltDragonEngine"
     staticruntime "On"
     targetdir("bin/" .. outputdir)

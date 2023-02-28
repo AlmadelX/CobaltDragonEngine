@@ -7,6 +7,9 @@
     <Filter Include="CobaltDragonEngine\events">
       <UniqueIdentifier>{CF3CC037-3BFF-F3C1-84AF-824EF0B0CC9F}</UniqueIdentifier>
     </Filter>
+    <Filter Include="CobaltDragonEngine\input">
+      <UniqueIdentifier>{8A4F8030-7674-CFB0-9FBF-B4408B43CECE}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Platform">
       <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
     </Filter>
@@ -55,14 +58,22 @@
     <ClInclude Include="src\CobaltDragonEngine\events\WindowEvent.h">
       <Filter>CobaltDragonEngine\events</Filter>
     </ClInclude>
+    <ClInclude Include="src\CobaltDragonEngine\input\Input.h">
+      <Filter>CobaltDragonEngine\input</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CobaltDragonEngine\input\KeyCodes.h">
+      <Filter>CobaltDragonEngine\input</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CobaltDragonEngine\input\MouseCodes.h">
+      <Filter>CobaltDragonEngine\input</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsInput.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
       <Filter>Platform\Windows</Filter>
     </ClInclude>
     <ClInclude Include="src\cdepch.h" />
-    <ClInclude Include="src\CobaltDragonEngine\input\Input.h" />
-    <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
-    <ClInclude Include="src\CobaltDragonEngine\input\KeyCodes.h" />
-    <ClInclude Include="src\CobaltDragonEngine\input\MouseCodes.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\CobaltDragonEngine\Application.cpp">
@@ -86,10 +97,12 @@
     <ClCompile Include="src\CobaltDragonEngine\events\WindowEvent.cpp">
       <Filter>CobaltDragonEngine\events</Filter>
     </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsInput.cpp">
+      <Filter>Platform\Windows</Filter>
+    </ClCompile>
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
       <Filter>Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\cdepch.cpp" />
-    <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
   </ItemGroup>
 </Project>

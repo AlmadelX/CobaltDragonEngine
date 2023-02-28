@@ -1,13 +1,13 @@
 #include "CobaltDragonEngine.h"
 
+#include <glm/vec3.hpp>
+
 class GameLayer : public CDE::Layer
 {
 public:
-	GameLayer() : Layer("Game") {}
-
-	virtual void OnUpdate() override
+	GameLayer() : Layer("Game")
 	{
-		CDE_TRACE("Space key polling: {}", CDE::Input::IsKeyPressed(CDE_KEY_SPACE) ? "Pressed" : "Released");
+		glm::vec3 v(1.0f, 2.0f, 3.0f);
 	}
 };
 
