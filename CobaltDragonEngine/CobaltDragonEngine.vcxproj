@@ -146,6 +146,7 @@
     <ClInclude Include="src\CobaltDragonEngine\Application.h" />
     <ClInclude Include="src\CobaltDragonEngine\Core.h" />
     <ClInclude Include="src\CobaltDragonEngine\EntryPoint.h" />
+    <ClInclude Include="src\CobaltDragonEngine\Input.h" />
     <ClInclude Include="src\CobaltDragonEngine\Layer.h" />
     <ClInclude Include="src\CobaltDragonEngine\LayerStack.h" />
     <ClInclude Include="src\CobaltDragonEngine\Log.h" />
@@ -156,6 +157,7 @@
     <ClInclude Include="src\CobaltDragonEngine\events\KeyEvent.h" />
     <ClInclude Include="src\CobaltDragonEngine\events\MouseEvent.h" />
     <ClInclude Include="src\CobaltDragonEngine\events\WindowEvent.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\cdepch.h" />
   </ItemGroup>
@@ -167,6 +169,7 @@
     <ClCompile Include="src\CobaltDragonEngine\events\KeyEvent.cpp" />
     <ClCompile Include="src\CobaltDragonEngine\events\MouseEvent.cpp" />
     <ClCompile Include="src\CobaltDragonEngine\events\WindowEvent.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\cdepch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>

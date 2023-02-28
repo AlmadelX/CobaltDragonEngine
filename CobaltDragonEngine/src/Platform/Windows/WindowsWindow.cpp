@@ -15,10 +15,9 @@ namespace CDE {
 	WindowsWindow::WindowsWindow(const WindowProps& props)
 		: m_Data{ props.Title, props.Width, props.Height }
 	{
-		CDE_ASSERT(!s_Instance, "Only one window is supported");
-		s_Instance = this;
-
-		InitGLFW();
+		if (!s_InstancesCount)
+			InitGLFW();
+		++s_InstancesCount;
 
 		m_Window = glfwCreateWindow(m_Data.Width, m_Data.Height, m_Data.Title.c_str(), nullptr, nullptr);
 
@@ -35,7 +34,10 @@ namespace CDE {
 	WindowsWindow::~WindowsWindow()
 	{
 		glfwDestroyWindow(m_Window);
-		ShutdownGLFW();
+
+		--s_InstancesCount;
+		if (!s_InstancesCount)
+			ShutdownGLFW();
 	}
 
 	void WindowsWindow::OnUpdate()
@@ -196,6 +198,6 @@ namespace CDE {
 		});
 	}
 
-	WindowsWindow* WindowsWindow::s_Instance;
+	int WindowsWindow::s_InstancesCount;
 
 }

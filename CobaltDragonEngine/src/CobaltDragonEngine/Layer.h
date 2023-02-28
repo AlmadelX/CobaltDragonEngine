@@ -18,12 +18,15 @@ namespace CDE {
 		virtual void OnEvent(Event& event) {}
 
 #if defined(CDE_DEBUG)
-		Layer(const std::string& name) : m_Name{ name } {}
-
 		inline const std::string& GetName() const { return m_Name; }
 
 	protected:
+		Layer(const std::string& name) : m_Name{ name } {}
+
 		std::string m_Name;
+#else
+	protected:
+		Layer() = default;
 #endif
 	};
 

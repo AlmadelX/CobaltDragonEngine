@@ -11,7 +11,7 @@ namespace CDE {
 
 	Application& Application::Get()
 	{
-		CDE_ASSERT(s_Instance, "Application is not created yet");
+		CDE_CORE_ASSERT(s_Instance, "Application is not created yet");
 		return *s_Instance;
 	}
 
@@ -72,7 +72,7 @@ namespace CDE {
 	Application::Application()
 		: m_Window(Window::Create())
 	{
-		CDE_ASSERT(!s_Instance, "Application is already created");
+		CDE_CORE_ASSERT(!s_Instance, "Application is already created");
 		s_Instance = this;
 
 		Log::Init();

@@ -14,7 +14,7 @@ namespace CDE {
 		int Height = 720;
 	};
 
-	// Desktop window
+	// Single desktop window
 	class Window
 	{
 	public:

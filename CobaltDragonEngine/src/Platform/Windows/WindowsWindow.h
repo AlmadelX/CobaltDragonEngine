@@ -7,10 +7,9 @@
 
 #include "CobaltDragonEngine/Window.h"
 
-#if defined(CDE_PLATFORM_WINDOWS)
 namespace CDE {
 
-	// Single window
+	// GLFW manager
 	class WindowsWindow : public Window
 	{
 	public:
@@ -23,7 +22,7 @@ namespace CDE {
 		inline virtual int GetWidth() const override { return m_Data.Width; }
 		virtual int GetHeight() const override { return m_Data.Height; }
 		virtual bool IsVSync() const override { return m_Data.VSync; }
-		virtual void* GetNativeWindow() const override { return nullptr; }
+		virtual void* GetNativeWindow() const override { return m_Window; }
 
 		virtual void SetVSync(bool vSync) override;
 		virtual void SetEventCallback(EventCallback callback) override { m_Data.EventCallback = callback; }
@@ -44,11 +43,10 @@ namespace CDE {
 
 		void SetupGLFWCallbacks();
 
-		static WindowsWindow* s_Instance;
+		static int s_InstancesCount;
 
 		Data m_Data;
 		GLFWwindow* m_Window;
 	};
 
 }
-#endif
