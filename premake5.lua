@@ -37,6 +37,7 @@ group "Dependencies"
     include "CobaltDragonEngine/vendor/GLFW"
     include "CobaltDragonEngine/vendor/glad"
     include "CobaltDragonEngine/vendor/ImGui"
+    include "CobaltDragonEngine/vendor/spdlog"
 
 group ""
 
@@ -55,7 +56,7 @@ project "CobaltDragonEngine"
     includedirs { "%{prj.name}/src", libs["spdlog"], libs["GLFW"], libs["glad"], libs["glm"], libs["ImGui"] }
     pchheader "cdepch.h"
     pchsource "%{prj.name}/src/cdepch.cpp"
-    links { "opengl32.lib", "GLFW", "glad", "ImGui" }
+    links { "opengl32.lib", "GLFW", "glad", "ImGui", "spdlog" }
     staticruntime "On"
     targetdir("bin/" .. outputdir)
     objdir("bin-int/" .. outputdir)

@@ -13,6 +13,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ImGui", "CobaltDragonEngine
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "glad", "CobaltDragonEngine\vendor\glad\glad.vcxproj", "{DD62977C-C999-980D-7286-7E105E9C140F}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "spdlog", "CobaltDragonEngine\vendor\spdlog\spdlog.vcxproj", "{8EAD431C-7A4F-6EF2-630A-82464F4BF542}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Windows = Debug|Windows
@@ -50,6 +52,12 @@ Global
 		{DD62977C-C999-980D-7286-7E105E9C140F}.Dist|Windows.Build.0 = Dist Windows|x64
 		{DD62977C-C999-980D-7286-7E105E9C140F}.Release|Windows.ActiveCfg = Release Windows|x64
 		{DD62977C-C999-980D-7286-7E105E9C140F}.Release|Windows.Build.0 = Release Windows|x64
+		{8EAD431C-7A4F-6EF2-630A-82464F4BF542}.Debug|Windows.ActiveCfg = Debug Windows|x64
+		{8EAD431C-7A4F-6EF2-630A-82464F4BF542}.Debug|Windows.Build.0 = Debug Windows|x64
+		{8EAD431C-7A4F-6EF2-630A-82464F4BF542}.Dist|Windows.ActiveCfg = Dist Windows|x64
+		{8EAD431C-7A4F-6EF2-630A-82464F4BF542}.Dist|Windows.Build.0 = Dist Windows|x64
+		{8EAD431C-7A4F-6EF2-630A-82464F4BF542}.Release|Windows.ActiveCfg = Release Windows|x64
+		{8EAD431C-7A4F-6EF2-630A-82464F4BF542}.Release|Windows.Build.0 = Release Windows|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -58,5 +66,6 @@ Global
 		{154B857C-0182-860D-AA6E-6C109684020F} = {53E47842-3FC8-3998-A828-34EB942B241A}
 		{C0FF640D-2C14-8DBE-F595-301E616989EF} = {53E47842-3FC8-3998-A828-34EB942B241A}
 		{DD62977C-C999-980D-7286-7E105E9C140F} = {53E47842-3FC8-3998-A828-34EB942B241A}
+		{8EAD431C-7A4F-6EF2-630A-82464F4BF542} = {53E47842-3FC8-3998-A828-34EB942B241A}
 	EndGlobalSection
 EndGlobal

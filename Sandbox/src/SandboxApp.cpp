@@ -1,7 +1,5 @@
 #include "CobaltDragonEngine.h"
 
-#include <imgui.h>
-
 class GameLayer : public CDE::Layer
 {
 public:
@@ -14,6 +12,7 @@ public:
 
 	virtual void OnRender() override
 	{
+		CDE_TRACE("spdlog");
 		CDE::RenderCommand::Clear();
 	}
 };
