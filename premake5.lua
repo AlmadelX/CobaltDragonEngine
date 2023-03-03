@@ -45,7 +45,13 @@ project "CobaltDragonEngine"
     language "C++"
     cppdialect "C++17"
     location "%{prj.name}"
-    files { "%{prj.name}/src/**.h", "%{prj.name}/src/**.cpp" }
+    files {
+        "%{prj.name}/src/cdepch.h",
+        "%{prj.name}/src/CobaltDragonEngine.h",
+        "%{prj.name}/src/CobaltDragonEngine/**.h",
+        "%{prj.name}/src/cdepch.cpp",
+        "%{prj.name}/src/CobaltDragonEngine/**.cpp"
+    }
     includedirs { "%{prj.name}/src", libs["spdlog"], libs["GLFW"], libs["glad"], libs["glm"], libs["ImGui"] }
     pchheader "cdepch.h"
     pchsource "%{prj.name}/src/cdepch.cpp"
@@ -53,6 +59,14 @@ project "CobaltDragonEngine"
     staticruntime "On"
     targetdir("bin/" .. outputdir)
     objdir("bin-int/" .. outputdir)
+
+    filter "platforms:Windows"
+        files {
+            "%{prj.name}/src/platform/Windows/**.h",
+            "%{prj.name}/src/platform/OpenGL/**.h",
+            "%{prj.name}/src/platform/Windows/**.cpp",
+            "%{prj.name}/src/platform/OpenGL/**.cpp"
+        }
 
 project "Sandbox"
     kind "ConsoleApp"

@@ -160,9 +160,13 @@
     <ClInclude Include="src\CobaltDragonEngine\input\Input.h" />
     <ClInclude Include="src\CobaltDragonEngine\input\KeyCodes.h" />
     <ClInclude Include="src\CobaltDragonEngine\input\MouseCodes.h" />
-    <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
-    <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
+    <ClInclude Include="src\CobaltDragonEngine\renderer\RenderCommand.h" />
+    <ClInclude Include="src\CobaltDragonEngine\renderer\Renderer.h" />
+    <ClInclude Include="src\CobaltDragonEngine\renderer\RendererAPI.h" />
     <ClInclude Include="src\cdepch.h" />
+    <ClInclude Include="src\platform\OpenGL\OpenGLAPI.h" />
+    <ClInclude Include="src\platform\Windows\WindowsInput.h" />
+    <ClInclude Include="src\platform\Windows\WindowsWindow.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\CobaltDragonEngine\Application.cpp" />
@@ -174,11 +178,14 @@
     <ClCompile Include="src\CobaltDragonEngine\events\KeyEvent.cpp" />
     <ClCompile Include="src\CobaltDragonEngine\events\MouseEvent.cpp" />
     <ClCompile Include="src\CobaltDragonEngine\events\WindowEvent.cpp" />
-    <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
-    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
+    <ClCompile Include="src\CobaltDragonEngine\renderer\RenderCommand.cpp" />
+    <ClCompile Include="src\CobaltDragonEngine\renderer\RendererAPI.cpp" />
     <ClCompile Include="src\cdepch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="src\platform\OpenGL\OpenGLAPI.cpp" />
+    <ClCompile Include="src\platform\Windows\WindowsInput.cpp" />
+    <ClCompile Include="src\platform\Windows\WindowsWindow.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="vendor\GLFW\GLFW.vcxproj">

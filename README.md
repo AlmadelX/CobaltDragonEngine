@@ -15,3 +15,4 @@ My game engine, which I use to learn game engine development.
 * Key and mouse codes
 * glm
 * ImGui docking
+* Renderer, RenderCommand, RendererAPI, platform and API abstraction

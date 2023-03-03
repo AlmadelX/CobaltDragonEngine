@@ -19,5 +19,8 @@
 #include "CobaltDragonEngine/input/KeyCodes.h"
 #include "CobaltDragonEngine/input/MouseCodes.h"
 
+// Renderer
+#include "CobaltDragonEngine/renderer/Renderer.h"
+
 // Entry point is here
 #include "CobaltDragonEngine/EntryPoint.h"

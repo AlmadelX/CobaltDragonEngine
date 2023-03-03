@@ -7,10 +7,14 @@ class GameLayer : public CDE::Layer
 public:
 	GameLayer() : Layer("Game") {}
 
-	virtual void OnImGuiRender() override
+	virtual void OnAttach() override
 	{
-		bool show;
-		ImGui::ShowDemoWindow(&show);
+		CDE::RenderCommand::SetClearColor({ 0.1f, 0.8f, 0.7f, 1.0f });
+	}
+
+	virtual void OnRender() override
+	{
+		CDE::RenderCommand::Clear();
 	}
 };
 

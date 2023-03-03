@@ -1,9 +1,6 @@
 #include "cdepch.h"
 #include "Application.h"
 
-// Temporary
-#include <glad/glad.h>
-
 #include "events/ApplicationEvent.h"
 #include "events/EventDispatcher.h"
 
@@ -32,11 +29,7 @@ namespace CDE {
 			for (Layer* layer : m_LayerStack)
 				layer->OnRender();
 
-			// Temporary
-			glClearColor(0.1f, 0.8f, 0.7f, 1.0f);
-			glClear(GL_COLOR_BUFFER_BIT);
-
-			//ImGui
+			// ImGui
 			m_ImGuiLayer->Begin();
 			for (Layer* layer : m_LayerStack)
 				layer->OnImGuiRender();
@@ -82,7 +75,9 @@ namespace CDE {
 		s_Instance = this;
 
 		Log::Init();
+
 		m_Window->SetEventCallback(BIND_FN(Application::OnEvent));
+
 		m_ImGuiLayer = new ImGuiLayer;
 		m_LayerStack.PushOverlay(m_ImGuiLayer);
 
