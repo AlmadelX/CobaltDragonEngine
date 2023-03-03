@@ -10,8 +10,7 @@
 // Events
 #include "CobaltDragonEngine/events/ApplicationEvent.h"
 #include "CobaltDragonEngine/events/EventDispatcher.h"
-#include "CobaltDragonEngine/events/KeyEvent.h"
-#include "CobaltDragonEngine/events/MouseEvent.h"
+#include "CobaltDragonEngine/events/InputEvent.h"
 #include "CobaltDragonEngine/events/WindowEvent.h"
 
 // Input

@@ -4,19 +4,17 @@
 
 namespace CDE {
 
-	class ApplicationEvent : public Event
+	class ApplicationEvent : public Event {};
+
+	class AppTickEvent final : public ApplicationEvent
 	{
 	public:
-		EVENT_CATEGORIES(EventCategoryApplication)
-	};
+		AppTickEvent(float delta) noexcept : m_Delta(delta) {}
+		AppTickEvent(const AppTickEvent& other) = delete;
 
-	class AppTickEvent : public ApplicationEvent
-	{
-	public:
-		EVENT_TYPE(AppTick)
+		AppTickEvent& operator=(const AppTickEvent& other) = delete;
 
-		AppTickEvent(float delta) : m_Delta(delta) {}
-
+		inline virtual std::string GetName() const override { return "AppTickEvent"; }
 		virtual std::string ToString() const override;
 
 		inline float GetDelta() const { return m_Delta; }
@@ -25,16 +23,26 @@ namespace CDE {
 		const float m_Delta;
 	};
 
-	class AppUpdateEvent : public ApplicationEvent
+	class AppUpdateEvent final : public ApplicationEvent
 	{
 	public:
-		EVENT_TYPE(AppUpdate)
+		AppUpdateEvent() = default;
+		AppUpdateEvent(const AppUpdateEvent& other) = delete;
+
+		AppUpdateEvent& operator=(const AppUpdateEvent& other) = delete;
+
+		inline virtual std::string GetName() const override { return "AppUpdateEvent"; }
 	};
 
-	class AppRenderEvent : public ApplicationEvent
+	class AppRenderEvent final : public ApplicationEvent
 	{
 	public:
-		EVENT_TYPE(AppRender)
+		AppRenderEvent() = default;
+		AppRenderEvent(const AppRenderEvent& other) = delete;
+
+		AppRenderEvent& operator=(const AppRenderEvent& other) = delete;
+
+		inline virtual std::string GetName() const override { return "AppRenderEvent"; }
 	};
 
 }

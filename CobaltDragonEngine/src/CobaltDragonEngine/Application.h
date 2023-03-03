@@ -36,7 +36,7 @@ namespace CDE {
 		Application();
 
 	private:
-		bool OnWindowClose(const WindowCloseEvent& event);
+		bool HandleWindowClose(const WindowCloseEvent& event);
 
 		static Application* s_Instance;
 

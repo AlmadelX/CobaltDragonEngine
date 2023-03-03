@@ -61,10 +61,7 @@
     <ClInclude Include="src\CobaltDragonEngine\events\EventDispatcher.h">
       <Filter>CobaltDragonEngine\events</Filter>
     </ClInclude>
-    <ClInclude Include="src\CobaltDragonEngine\events\KeyEvent.h">
-      <Filter>CobaltDragonEngine\events</Filter>
-    </ClInclude>
-    <ClInclude Include="src\CobaltDragonEngine\events\MouseEvent.h">
+    <ClInclude Include="src\CobaltDragonEngine\events\InputEvent.h">
       <Filter>CobaltDragonEngine\events</Filter>
     </ClInclude>
     <ClInclude Include="src\CobaltDragonEngine\events\WindowEvent.h">
@@ -118,10 +115,7 @@
     <ClCompile Include="src\CobaltDragonEngine\events\ApplicationEvent.cpp">
       <Filter>CobaltDragonEngine\events</Filter>
     </ClCompile>
-    <ClCompile Include="src\CobaltDragonEngine\events\KeyEvent.cpp">
-      <Filter>CobaltDragonEngine\events</Filter>
-    </ClCompile>
-    <ClCompile Include="src\CobaltDragonEngine\events\MouseEvent.cpp">
+    <ClCompile Include="src\CobaltDragonEngine\events\InputEvent.cpp">
       <Filter>CobaltDragonEngine\events</Filter>
     </ClCompile>
     <ClCompile Include="src\CobaltDragonEngine\events\WindowEvent.cpp">

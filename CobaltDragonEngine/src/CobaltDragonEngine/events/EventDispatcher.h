@@ -9,16 +9,23 @@ namespace CDE {
 	class EventDispatcher
 	{
 		template<typename T>
-		using EventHandler = std::function<bool(const T&)>;
+		using HandleEvent = std::function<bool(const T&)>;
 
 	public:
-		EventDispatcher(Event& event) : m_Event(event) {}
+		EventDispatcher(Event& event) noexcept : m_Event(event) {}
+		EventDispatcher(const EventDispatcher& other) = delete;
+
+		EventDispatcher& operator=(const EventDispatcher& other) = delete;
 
 		template<typename T>
-		void Dispatch(EventHandler<T> handler) const
+		void Dispatch(HandleEvent<T> handle) const
 		{
-			if (!m_Event.IsHandled() && m_Event.GetType() == T::Type())
-				m_Event.m_Handled = handler(dynamic_cast<const T&>(m_Event));
+			if (m_Event.m_Handled)
+				return;
+
+			const T* event = dynamic_cast<const T*>(&m_Event);
+			if (event)
+				m_Event.m_Handled = handle(*event);
 		}
 
 	private:

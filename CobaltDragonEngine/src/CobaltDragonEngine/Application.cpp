@@ -42,7 +42,7 @@ namespace CDE {
 	void Application::OnEvent(Event& event)
 	{
 		EventDispatcher dispatcher(event);
-		dispatcher.Dispatch<WindowCloseEvent>(BIND_FN(Application::OnWindowClose));
+		dispatcher.Dispatch<WindowCloseEvent>(BIND_EVENT_FUNCTION(Application::HandleWindowClose));
 
 		for (auto it = m_LayerStack.rbegin(); it != m_LayerStack.rend() && !event.IsHandled(); ++it)
 			(*it)->OnEvent(event);
@@ -76,7 +76,7 @@ namespace CDE {
 
 		Log::Init();
 
-		m_Window->SetEventCallback(BIND_FN(Application::OnEvent));
+		m_Window->SetEventCallback(BIND_EVENT_FUNCTION(Application::OnEvent));
 
 		m_ImGuiLayer = new ImGuiLayer;
 		m_LayerStack.PushOverlay(m_ImGuiLayer);
@@ -84,7 +84,7 @@ namespace CDE {
 		CDE_CORE_INFO("Application created");
 	}
 
-	bool Application::OnWindowClose(const WindowCloseEvent& event)
+	bool Application::HandleWindowClose(const WindowCloseEvent& event)
 	{
 		m_Running = false;
 		return true;

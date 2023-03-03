@@ -4,37 +4,50 @@
 
 namespace CDE {
 
-	class WindowEvent : public Event
+	class WindowEvent : public Event {};
+
+	class WindowCloseEvent final : public WindowEvent
 	{
 	public:
-		EVENT_CATEGORIES(EventCategoryWindow)
+		WindowCloseEvent() = default;
+		WindowCloseEvent(const WindowCloseEvent& other) = delete;
+
+		WindowCloseEvent& operator=(const WindowCloseEvent& other) = delete;
+
+		inline virtual std::string GetName() const override { return "WindowCloseEvent"; }
 	};
 
-	class WindowCloseEvent : public WindowEvent
+	class WindowFocusEvent final : public WindowEvent
 	{
 	public:
-		EVENT_TYPE(WindowClose)
+		WindowFocusEvent() = default;
+		WindowFocusEvent(const WindowFocusEvent& other) = delete;
+
+		WindowFocusEvent& operator=(const WindowFocusEvent& other) = delete;
+
+		inline virtual std::string GetName() const override { return "WindowFocusEvent"; }
 	};
 
-	class WindowFocusEvent : public WindowEvent
+	class WindowLostFocusEvent final : public WindowEvent
 	{
 	public:
-		EVENT_TYPE(WindowFocus)
+		WindowLostFocusEvent() = default;
+		WindowLostFocusEvent(const WindowLostFocusEvent& other) = delete;
+
+		WindowLostFocusEvent& operator=(const WindowLostFocusEvent& other) = delete;
+
+		inline virtual std::string GetName() const override { return "WindowLostFocusEvent"; }
 	};
 
-	class WindowLostFocusEvent : public WindowEvent
+	class WindowMoveEvent final : public WindowEvent
 	{
 	public:
-		EVENT_TYPE(WindowLostFocus)
-	};
+		WindowMoveEvent(int x, int y) noexcept : m_X(x), m_Y(y) {}
+		WindowMoveEvent(const WindowMoveEvent& other) = delete;
 
-	class WindowMoveEvent : public WindowEvent
-	{
-	public:
-		EVENT_TYPE(WindowMove)
+		WindowMoveEvent& operator=(const WindowMoveEvent& other) = delete;
 
-		WindowMoveEvent(int x, int y) : m_X(x), m_Y(y) {}
-
+		inline virtual std::string GetName() const override { return "WindowMoveEvent"; }
 		virtual std::string ToString() const override;
 
 		inline int GetX() const { return m_X; }
@@ -45,13 +58,15 @@ namespace CDE {
 		const int m_Y;
 	};
 
-	class WindowResizeEvent : public WindowEvent
+	class WindowResizeEvent final : public WindowEvent
 	{
 	public:
-		EVENT_TYPE(WindowResize)
+		WindowResizeEvent(int width, int height) noexcept : m_Width(width), m_Height(height) {}
+		WindowResizeEvent(const WindowResizeEvent& other) = delete;
 
-		WindowResizeEvent(int width, int height) : m_Width(width), m_Height(height) {}
+		WindowResizeEvent& operator=(const WindowResizeEvent& other) = delete;
 
+		inline virtual std::string GetName() const override { return "WindowResizeEvent"; }
 		virtual std::string ToString() const override;
 
 		inline int GetWidth() const { return m_Width; }

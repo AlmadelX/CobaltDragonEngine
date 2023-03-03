@@ -154,8 +154,7 @@
     <ClInclude Include="src\CobaltDragonEngine\events\ApplicationEvent.h" />
     <ClInclude Include="src\CobaltDragonEngine\events\Event.h" />
     <ClInclude Include="src\CobaltDragonEngine\events\EventDispatcher.h" />
-    <ClInclude Include="src\CobaltDragonEngine\events\KeyEvent.h" />
-    <ClInclude Include="src\CobaltDragonEngine\events\MouseEvent.h" />
+    <ClInclude Include="src\CobaltDragonEngine\events\InputEvent.h" />
     <ClInclude Include="src\CobaltDragonEngine\events\WindowEvent.h" />
     <ClInclude Include="src\CobaltDragonEngine\input\Input.h" />
     <ClInclude Include="src\CobaltDragonEngine\input\KeyCodes.h" />
@@ -175,8 +174,7 @@
     <ClCompile Include="src\CobaltDragonEngine\LayerStack.cpp" />
     <ClCompile Include="src\CobaltDragonEngine\Log.cpp" />
     <ClCompile Include="src\CobaltDragonEngine\events\ApplicationEvent.cpp" />
-    <ClCompile Include="src\CobaltDragonEngine\events\KeyEvent.cpp" />
-    <ClCompile Include="src\CobaltDragonEngine\events\MouseEvent.cpp" />
+    <ClCompile Include="src\CobaltDragonEngine\events\InputEvent.cpp" />
     <ClCompile Include="src\CobaltDragonEngine\events\WindowEvent.cpp" />
     <ClCompile Include="src\CobaltDragonEngine\renderer\RenderCommand.cpp" />
     <ClCompile Include="src\CobaltDragonEngine\renderer\RendererAPI.cpp" />

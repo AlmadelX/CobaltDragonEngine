@@ -2,8 +2,7 @@
 #include "WindowsWindow.h"
 
 #include "CobaltDragonEngine/events/WindowEvent.h"
-#include "CobaltDragonEngine/events/KeyEvent.h"
-#include "CobaltDragonEngine/events/MouseEvent.h"
+#include "CobaltDragonEngine/events/InputEvent.h"
 
 namespace CDE {
 

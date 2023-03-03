@@ -1,7 +1,25 @@
 #include "cdepch.h"
-#include "MouseEvent.h"
+#include "InputEvent.h"
 
 namespace CDE {
+
+	std::string KeyEvent::ToString() const
+	{
+		std::ostringstream out;
+		out << GetName() << ": " << m_Key;
+
+		return out.str();
+	}
+
+	std::string KeyPressEvent::ToString() const
+	{
+		std::ostringstream out;
+		out << GetName() << ": " << m_Key;
+		if (m_Repeat)
+			out << ", repeat";
+
+		return out.str();
+	}
 
 	std::string MouseMoveEvent::ToString() const
 	{

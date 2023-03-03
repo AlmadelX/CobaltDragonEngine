@@ -19,5 +19,3 @@
 	#define CDE_CORE_ASSERT(x, ...)
 	#define CDE_ASSERT(x, ...)
 #endif
-
-#define BIT(x) (1 << (x))
