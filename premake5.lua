@@ -1,11 +1,11 @@
 outputdir = "%{cfg.buildcfg}-%{cfg.platform}/%{prj.name}"
 
-local libs = {
-    ["spdlog"] = "CobaltDragonEngine/vendor/spdlog/include",
-    ["GLFW"]   = "CobaltDragonEngine/vendor/GLFW/include",
-    ["glad"]   = "CobaltDragonEngine/vendor/glad/include",
-    ["glm"]    = "CobaltDragonEngine/vendor/glm/include",
-    ["ImGui"]  = "CobaltDragonEngine/vendor/ImGui/include"
+libs = {
+    ["spdlog"] = "%{wks.location}/vendor/spdlog/include",
+    ["GLFW"]   = "%{wks.location}/CobaltDragonEngine/vendor/GLFW/include",
+    ["glad"]   = "%{wks.location}/CobaltDragonEngine/vendor/glad/include",
+    ["glm"]    = "%{wks.location}/vendor/glm/include",
+    ["ImGui"]  = "%{wks.location}/vendor/ImGui/include"
 }
 
 workspace "CobaltDragonEngine"
@@ -29,15 +29,15 @@ workspace "CobaltDragonEngine"
         optimize "On"
     
     filter "platforms:Windows"
-        defines { "CDE_PLATFORM_WINDOWS", "_CRT_SECURE_NO_WARNINGS" }
+        defines "CDE_PLATFORM_WINDOWS"
         architecture "x64"
         system "Windows"
 
-group "Dependencies"
+group "dependencies"
+    include "vendor/spdlog"
     include "CobaltDragonEngine/vendor/GLFW"
     include "CobaltDragonEngine/vendor/glad"
-    include "CobaltDragonEngine/vendor/ImGui"
-    include "CobaltDragonEngine/vendor/spdlog"
+    include "vendor/ImGui"
 
 group ""
 

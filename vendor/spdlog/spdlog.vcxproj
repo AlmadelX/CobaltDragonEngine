@@ -53,20 +53,20 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Windows|x64'">
-    <OutDir>..\..\..\bin\Debug-Windows\spdlog\</OutDir>
-    <IntDir>..\..\..\bin-int\Debug-Windows\spdlog\</IntDir>
+    <OutDir>..\..\bin\Debug-Windows\spdlog\</OutDir>
+    <IntDir>..\..\bin-int\Debug-Windows\spdlog\</IntDir>
     <TargetName>spdlog</TargetName>
     <TargetExt>.lib</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Windows|x64'">
-    <OutDir>..\..\..\bin\Release-Windows\spdlog\</OutDir>
-    <IntDir>..\..\..\bin-int\Release-Windows\spdlog\</IntDir>
+    <OutDir>..\..\bin\Release-Windows\spdlog\</OutDir>
+    <IntDir>..\..\bin-int\Release-Windows\spdlog\</IntDir>
     <TargetName>spdlog</TargetName>
     <TargetExt>.lib</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Dist Windows|x64'">
-    <OutDir>..\..\..\bin\Dist-Windows\spdlog\</OutDir>
-    <IntDir>..\..\..\bin-int\Dist-Windows\spdlog\</IntDir>
+    <OutDir>..\..\bin\Dist-Windows\spdlog\</OutDir>
+    <IntDir>..\..\bin-int\Dist-Windows\spdlog\</IntDir>
     <TargetName>spdlog</TargetName>
     <TargetExt>.lib</TargetExt>
   </PropertyGroup>
@@ -74,7 +74,7 @@
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>CDE_DEBUG;CDE_PLATFORM_WINDOWS;_CRT_SECURE_NO_WARNINGS;SPDLOG_COMPILED_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>CDE_DEBUG;CDE_PLATFORM_WINDOWS;SPDLOG_COMPILED_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
@@ -90,7 +90,7 @@
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>CDE_RELEASE;CDE_PLATFORM_WINDOWS;_CRT_SECURE_NO_WARNINGS;SPDLOG_COMPILED_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>CDE_RELEASE;CDE_PLATFORM_WINDOWS;SPDLOG_COMPILED_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -110,7 +110,7 @@
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>CDE_DIST;CDE_PLATFORM_WINDOWS;_CRT_SECURE_NO_WARNINGS;SPDLOG_COMPILED_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>CDE_DIST;CDE_PLATFORM_WINDOWS;SPDLOG_COMPILED_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>

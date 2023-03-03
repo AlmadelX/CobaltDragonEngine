@@ -100,9 +100,6 @@
     <ClCompile Include="src\CobaltDragonEngine\Application.cpp">
       <Filter>CobaltDragonEngine</Filter>
     </ClCompile>
-    <ClCompile Include="src\CobaltDragonEngine\ImGui\ImGui.cpp">
-      <Filter>CobaltDragonEngine\ImGui</Filter>
-    </ClCompile>
     <ClCompile Include="src\CobaltDragonEngine\ImGui\ImGuiLayer.cpp">
       <Filter>CobaltDragonEngine\ImGui</Filter>
     </ClCompile>
